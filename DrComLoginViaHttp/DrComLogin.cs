@@ -210,15 +210,14 @@ namespace DrComLoginViaHttp
                         if (pingreply.Status != System.Net.NetworkInformation.IPStatus.Success)
                         {
                             debuglog.Debug("login needs~");
-                            if (mLoginDrComService == 1)
-                            {
+                            
                                 LoginDrDotComService(DrComLoginViaHttp.Properties.Settings.Default.USERNAME,
                                             DrComLoginViaHttp.Properties.Settings.Default.PASSWORD,
                                             TypeOfLogin.Type_Md5,
                                             sb);
                                 pingsecond = 1000;
                                 debuglog.Debug("reset pingsecond to 1000 ms");
-                            }
+                            
                             
                         }
                         else
